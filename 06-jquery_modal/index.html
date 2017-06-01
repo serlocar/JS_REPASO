@@ -13,13 +13,17 @@
     <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui/jquery-ui.js"></script>
+    <script src="js/es.js"></script>
     <script>
         $(function() {
 
             $("#dialog").dialog();
 
             $("#tabs").tabs();
-
+            $.datepicker.setDefaults($.datepicker.regional["es"]);
+            $("#datepicker").datepicker({
+                firstDay: 1
+            });
         });
     </script>
 </head>
@@ -52,7 +56,7 @@
     <div id="dialog" title="Basic dialog">
         <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
     </div>
-
+    <div id="datepicker"></div>
 </body>
 
 </html>
